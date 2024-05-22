@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import csv
 import json
 import html
-
+from WebsiteParser import WebsiteParser
 class BalmainProductParser(WebsiteParser):
     def parse_website(self, source, category):
         return super().parse_website(source, lambda soup: self.parse_product_blocks(soup, category))
